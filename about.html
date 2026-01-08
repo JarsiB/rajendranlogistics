@@ -23,42 +23,95 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
     }
+/* ================= TOP BAR ================= */
+.top-bar {
+  position: fixed;          /* IMPORTANT */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0b1d33;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 8px 0;
+  z-index: 1051; /* ABOVE NAVBAR */
+}
 
-    /* ================= TOP BAR ================= */
-    .top-bar {
-      background-color: #0b1d33;
-      color: #ffffff;
-      font-size: 14px;
-      padding: 8px 0;
-      padding-bottom: 10px;
-      padding-right: 10px;
-    }
+.top-bar i {
+  color: rgb(247, 226, 89);
+  margin-right: 6px;
+}
 
-    .top-bar i {
-      color:  rgb(247, 226, 89);
-      margin-right: 6px;
-    }
+.top-bar a {
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap; /* break aagama irukka */
+}
 
-    .top-bar a {
-      color: #ffffff;
-      text-decoration: none;
-    }
+/* ================= MOBILE MEDIA QUERY ================= */
+@media (max-width: 576px) {
 
-    /* ================= NAVBAR ================= */
-    .navbar {
-      background-color: #ffffff;
-      padding: 15px 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
+  .top-bar {
+    padding: 1px 0;
+    font-size: 10px;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+  }
+
+  .top-bar .row {
+    display: flex;
+    flex-direction: column;   /* phone & email stack */
+    align-items: center;
+    text-align: center;
+  }
+
+  .top-bar .row > div {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  .top-bar a {
+    display: inline-block;
+    font-size: 13px;
+  }
+}
+
+
+
+ /* ================= NAVBAR ================= */
+.navbar {
+  background-color: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 1050;
+}
 
    /* LOGO SIZE CONTROL */
 .navbar-brand img {
   height: 55px;        /* Desktop */
-  max-height: 70px;
+  /* max-height: 70px; */
 }
+/* Mobile */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 6px 0;
+    margin-top: 10px;
+  }
 
+  .navbar-brand img {
+    height: 40px;
+  }
+
+  .navbar-toggler {
+    padding: 4px 8px;
+  }
+}
 /* Tablet */
 @media (max-width: 992px) {
+  
+.navbar {
+    padding: 6px 0;
+    margin-top: 10px;
+  }
   .navbar-brand img {
     height: 55px;
   }
@@ -105,6 +158,13 @@
 .dropdown-item:hover {
   background-color: #f1f5ff;
   color:  rgb(247, 226, 89);
+}
+.main-navbar {
+  top: 42px; /* EXACT top-bar height */
+  background-color: #ffffff;
+  padding: 12px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 1090;
 }
 
     /* ================= HERO CAROUSEL ================= */
@@ -333,7 +393,7 @@
 </div>
 
 <!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-lg fixed-top" style="top:40px;">
+<nav class="navbar navbar-expand-lg fixed-top  main-navbar" >
   <div class="container">
 
     <!-- LOGO -->
