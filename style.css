@@ -662,26 +662,3 @@ background: rgba(247, 226, 89, 0.35);
   }
 }
 
-/* FIX TOP BAR CUT ISSUE */
-.top-bar {
-  height: auto !important;      /* 👈 height force remove */
-  overflow: visible !important; /* 👈 allow second line */
-}
-
-/* Mobile specific */
-@media (max-width: 576px) {
-  .top-bar {
-    padding: 12px 0;
-    line-height: 1.6;
-  }
-
-  .top-bar .row {
-    flex-direction: column;   /* 👈 stack items */
-  }
-
-  .top-bar .row > div {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 4px;
-  }
-}

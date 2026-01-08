@@ -25,49 +25,82 @@
     }
 
     /* ================= TOP BAR ================= */
-    .top-bar {
-      background-color: #0b1d33;
-      color: #ffffff;
-      font-size: 14px;
-      padding: 8px 0;
-      padding-bottom: 10px;
-      padding-right: 10px;
-    }
+  /* ================= TOP BAR ================= */
+.top-bar {
+  background-color: #0b1d33;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 8px 0;
+  z-index: 1051; /* ABOVE NAVBAR */
+}
 
-    .top-bar i {
-      color:  rgb(247, 226, 89);
-      margin-right: 6px;
-    }
+.top-bar i {
+  color: rgb(247, 226, 89);
+  margin-right: 6px;
+}
 
-    .top-bar a {
-      color: #ffffff;
-      text-decoration: none;
-    }
+.top-bar a {
+  color: #ffffff;
+  text-decoration: none;
+}
 
-    /* ================= NAVBAR ================= */
-    .navbar {
-      background-color: #ffffff;
-      padding: 15px 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
+/* MOBILE FIX */
+@media (max-width: 576px) {
+  .top-bar {
+    padding: 10px 0;
+    font-size: 13px;
+  }
+
+  .top-bar .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-bar .row > div {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+}
+
+
+ /* ================= NAVBAR ================= */
+.navbar {
+  background-color: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 1050;
+}
 
    /* LOGO SIZE CONTROL */
 .navbar-brand img {
   height: 55px;        /* Desktop */
-  max-height: 70px;
+  /* max-height: 70px; */
 }
+/* Mobile */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 6px 0;
+  }
 
+  .navbar-brand img {
+    height: 40px;
+  }
+
+  .navbar-toggler {
+    padding: 4px 8px;
+  }
+}
 /* Tablet */
 @media (max-width: 992px) {
   .navbar-brand img {
-    height: 40px;
+    height: 55px;
   }
 }
 
 /* Mobile */
 @media (max-width: 576px) {
   .navbar-brand img {
-    height: 30px;
+    height: 45px;
   }
 }
 
