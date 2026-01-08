@@ -26,7 +26,12 @@
 
     /* ================= TOP BAR ================= */
   /* ================= TOP BAR ================= */
+/* ================= TOP BAR ================= */
 .top-bar {
+  position: fixed;          /* IMPORTANT */
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #0b1d33;
   color: #ffffff;
   font-size: 14px;
@@ -42,25 +47,37 @@
 .top-bar a {
   color: #ffffff;
   text-decoration: none;
+  white-space: nowrap; /* break aagama irukka */
 }
 
-/* MOBILE FIX */
+/* ================= MOBILE MEDIA QUERY ================= */
 @media (max-width: 576px) {
+
   .top-bar {
-    padding: 10px 0;
-    font-size: 13px;
+    padding: 1px 0;
+    font-size: 10px;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
   }
 
   .top-bar .row {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column;   /* phone & email stack */
+    align-items: center;
     text-align: center;
   }
 
   .top-bar .row > div {
     width: 100%;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+  }
+
+  .top-bar a {
+    display: inline-block;
+    font-size: 13px;
   }
 }
+
 
 
  /* ================= NAVBAR ================= */
@@ -80,6 +97,7 @@
 @media (max-width: 576px) {
   .navbar {
     padding: 6px 0;
+    margin-top: 10px;
   }
 
   .navbar-brand img {
@@ -92,6 +110,11 @@
 }
 /* Tablet */
 @media (max-width: 992px) {
+  
+.navbar {
+    padding: 6px 0;
+    margin-top: 10px;
+  }
   .navbar-brand img {
     height: 55px;
   }
