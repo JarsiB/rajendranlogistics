@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rajendran Logistics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    /* ================= TOP BAR ================= */
+    .top-bar {
+      background-color: #0b1d33;
+      color: #ffffff;
+      font-size: 14px;
+      padding: 8px 0;
+      padding-bottom: 10px;
+      padding-right: 10px;
+    }
+
+    .top-bar i {
+      color:  rgb(247, 226, 89);
+      margin-right: 6px;
+    }
+
+    .top-bar a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* ================= NAVBAR ================= */
+    .navbar {
+      background-color: #ffffff;
+      padding: 15px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+   /* LOGO SIZE CONTROL */
+.navbar-brand img {
+  height: 55px;        /* Desktop */
+  max-height: 70px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .navbar-brand img {
+    height: 55px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 45px;
+  }
+}
+
+
+    .navbar-nav .nav-link {
+      color: #0b1d33 !important;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color:  rgb(247, 226, 89) !important;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+.dropdown-menu {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.dropdown-item {
+  padding: 10px 18px;
+  font-weight: 500;
+  color: #0b1d33;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f5ff;
+  color:  rgb(247, 226, 89);
+}
+
+    /* ================= HERO CAROUSEL ================= */
+    .hero-carousel {
+      background: linear-gradient(180deg, #0b1d33, #0e243f);
+    }
+
+    .hero-carousel img {
+      width: 100%;
+      object-fit: contain;
+      background-color: transparent;
+    }
+
+    @media (max-width: 576px) {
+      .navbar-brand img {
+        height: 38px;
+      }
+      .top-bar {
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 900,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+
+<!-- ================= TOP BAR ================= -->
+<div class="top-bar fixed-top">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-lg-6 col-md-12 mb-2 mb-lg-0" data-aos="zoom-in">
+        <i class="bi bi-telephone-fill"></i>
+        Call Us Now:
+        <a href="tel:+916364367706">+91-6364367706</a> /
+        <a href="tel:+918123579757">+91-8123579757</a>
+      </div>
+
+      <div class="col-lg-6 col-md-12 text-lg-end" data-aos="zoom-in">
+      
+        <i class="bi bi-envelope-fill"></i>
+        <a href="mailto:rajenlogistics@yahoo.com">rajenlogistics@yahoo.com</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top" style="top:40px;">
+  <div class="container">
+
+    <!-- LOGO -->
+    <a class="navbar-brand" href="index.html">
+      <img src="images/newlogo.png" alt="Rajendran Logistics" data-aos="zoom-in">
+    </a>
+
+    <!-- TOGGLER -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NAV LINKS -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="about.html">About Us</a></li>
+<li class="nav-item dropdown" data-aos="zoom-in">
+  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
+     role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Services
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="bulk-fly-ash.html">Bulk Fly Ash Transport</a></li>
+    <li><a class="dropdown-item" href="bulk-cement.html">Bulk Cement Transport</a></li>
+    <li><a class="dropdown-item" href="bottom-fly-ash.html">Bottom Fly Ash Transport</a></li>
+  </ul>
+</li>
+<li class="nav-item dropdown" data-aos="zoom-in">
+  <a class="nav-link dropdown-toggle" href="#" id="mineralsDropdown"
+     role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Rajendran Minerals
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="rajendran-minerals.html">Rajendran Minerals</a></li>
+    <li><a class="dropdown-item" href="about-fly-ash.html">About Fly Ash</a></li>
+  </ul>
+</li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="clients.html">Clients</a></li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+<section class="cta-section mt-5">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+
+      <div class="col-lg-8">
+        <h2 class="cta-title" data-aos="zoom-in">Rajendran Logistics</h2>
+        <p class="cta-text" data-aos="zoom-in">
+          Contact us now to get a quotation for transportation of
+          <strong>Bulk Cement</strong> and <strong>Bulk Dry Fly Ash</strong>.
+        </p>
+
+        <a href="contact.html" data-aos="zoom-in" class="cta-btn mt-4">Contact Us</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer mt-5">
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <!-- COMPANY INFO -->
+      <div class="col-lg-4 col-md-6">
+        <h4 class="footer-title" data-aos="fade-right" >Rajendran Logistics</h4>
+        <p class="footer-text"  data-aos="fade-right">
+          Transporters of Bulk Fly Ash and Cement, delivering reliable
+          and efficient logistics solutions across South India.
+        </p>
+
+        <div class="footer-social">
+    <a href="#" aria-label="Facebook" data-aos="fade-up"
+     data-aos-duration="3000"><i class="bi bi-facebook"></i></a>
+    <a href="#" aria-label="Instagram" data-aos="fade-up"
+     data-aos-duration="3000"><i class="bi bi-instagram"></i></a>
+    <a href="#" aria-label="LinkedIn" data-aos="fade-up"
+     data-aos-duration="3000"><i class="bi bi-linkedin"></i></a>
+    <a href="https://wa.me/916364367706" aria-label="WhatsApp" data-aos="fade-up"
+     data-aos-duration="3000">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="col-lg-2 col-md-6">
+        <h5 class="footer-heading" data-aos="zoom-in">Quick Links</h5>
+        <ul class="footer-links">
+          <li data-aos="zoom-in"><a href="index.html">Home</a></li>
+          <li data-aos="zoom-in"><a href="about.html">About Us</a></li>
+          <li data-aos="zoom-in"><a href="bulk-fly-ash.html">Services</a></li>
+          <li data-aos="zoom-in"><a href="rajendran-minerals.html">Rajendran Minerals</a></li>
+          <li data-aos="zoom-in"><a href="gallery.html">Gallery</a></li>
+          <li data-aos="zoom-in"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-heading" data-aos="zoom-in">Our Services</h5>
+        <ul class="footer-links">
+          <li data-aos="zoom-in"><a href="bulk-fly-ash.html">Bulk Fly Ash Transport</a></li>
+          <li data-aos="zoom-in"><a href="bulk-cement.html">Bulk Cement Transport</a></li>
+          <li data-aos="zoom-in"><a href="bottom-fly-ash.html">Bottom Fly Ash Transport</a></li>
+          <li data-aos="zoom-in"><a href="rajendran-minerals.html">Rajendran Minerals</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT + SOCIAL -->
+  <div class="col-lg-3 col-md-6">
+  <h5 class="footer-heading" data-aos="zoom-in">Contact Info</h5>
+
+  <!-- ADDRESS -->
+  <p class="footer-address" data-aos="zoom-in">
+    <i class="bi bi-geo-alt-fill"></i>
+    K.R Puram – Marathalli Ring Road,<br>
+    Mahadevapura Extension,<br>
+    Bangalore – 560048
+  </p>
+
+  <!-- PHONE -->
+  <p class="footer-contact-item" data-aos="zoom-in">
+    <i class="bi bi-telephone-fill"></i>
+    <a href="tel:+916364367706">+91-6364367706</a><br>
+    <i class="bi bi-telephone-fill"></i>
+    <a href="tel:+918123579757">+91-8123579757</a>
+  </p>
+
+  <!-- EMAIL -->
+  <p class="footer-contact-item" data-aos="zoom-in">
+    <i class="bi bi-envelope-fill"></i>
+    <a href="mailto:rajenlogistics@yahoo.com">
+      rajenlogistics@yahoo.com
+    </a>
+  </p>
+
+  <!-- SOCIAL ICONS -->
+ 
+</div>
+
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+      <p>
+        © 2025 <strong>Rajendran Logistics</strong>. All rights reserved.
+      </p>
+      <p>
+        Created by <a href="#" class="creator">Optimista</a>
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

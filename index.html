@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rajendran Logistics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    /* ================= TOP BAR ================= */
+    .top-bar {
+      background-color: #0b1d33;
+      color: #ffffff;
+      font-size: 14px;
+      padding: 8px 0;
+      padding-bottom: 10px;
+      padding-right: 10px;
+    }
+
+    .top-bar i {
+      color:  rgb(247, 226, 89);
+      margin-right: 6px;
+    }
+
+    .top-bar a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* ================= NAVBAR ================= */
+    .navbar {
+      background-color: #ffffff;
+      padding: 15px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+   /* LOGO SIZE CONTROL */
+.navbar-brand img {
+  height: 55px;        /* Desktop */
+  max-height: 70px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .navbar-brand img {
+    height: 55px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 45px;
+  }
+}
+
+
+    .navbar-nav .nav-link {
+      color: #0b1d33 !important;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color:  rgb(247, 226, 89) !important;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+.dropdown-menu {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.dropdown-item {
+  padding: 10px 18px;
+  font-weight: 500;
+  color: #0b1d33;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f5ff;
+  color:  rgb(247, 226, 89);
+}
+
+    /* ================= HERO CAROUSEL ================= */
+    .hero-carousel {
+      background: linear-gradient(180deg, #0b1d33, #0e243f);
+    }
+
+    .hero-carousel img {
+      width: 100%;
+      object-fit: contain;
+      background-color: transparent;
+    }
+
+    @media (max-width: 576px) {
+      .navbar-brand img {
+        height: 38px;
+      }
+      .top-bar {
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 900,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+
+<!-- ================= TOP BAR ================= -->
+<div class="top-bar fixed-top">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-lg-6 col-md-12 mb-2 mb-lg-0" data-aos="zoom-in">
+        <i class="bi bi-telephone-fill"></i>
+        Call Us Now:
+        <a href="tel:+916364367706">+91-6364367706</a> /
+        <a href="tel:+918123579757">+91-8123579757</a>
+      </div>
+
+      <div class="col-lg-6 col-md-12 text-lg-end" data-aos="zoom-in">
+      
+        <i class="bi bi-envelope-fill"></i>
+        <a href="mailto:rajenlogistics@yahoo.com">rajenlogistics@yahoo.com</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top" style="top:40px;">
+  <div class="container">
+
+    <!-- LOGO -->
+    <a class="navbar-brand" href="index.html">
+      <img src="images/newlogo.png" alt="Rajendran Logistics" data-aos="zoom-in">
+    </a>
+
+    <!-- TOGGLER -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NAV LINKS -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="about.html">About Us</a></li>
+<li class="nav-item dropdown" data-aos="zoom-in">
+  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
+     role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Services
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="bulk-fly-ash.html">Bulk Fly Ash Transport</a></li>
+    <li><a class="dropdown-item" href="bulk-cement.html">Bulk Cement Transport</a></li>
+    <li><a class="dropdown-item" href="bottom-fly-ash.html">Bottom Fly Ash Transport</a></li>
+  </ul>
+</li>
+<li class="nav-item dropdown" data-aos="zoom-in">
+  <a class="nav-link dropdown-toggle" href="#" id="mineralsDropdown"
+     role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Rajendran Minerals
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="rajendran-minerals.html">Rajendran Minerals</a></li>
+    <li><a class="dropdown-item" href="about-fly-ash.html">About Fly Ash</a></li>
+  </ul>
+</li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="clients.html">Clients</a></li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero-carousel pt-5 " style="margin-top: 80px;">
+  <div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="images/b1.jpg" alt="Banner 1">
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/b2.jpg" alt="Banner 2">
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/b3.jpg" alt="Banner 3">
+      </div>
+      <div class="carousel-item">
+        <img src="images/b4.jpg" alt="Banner 3">
+      </div>
+      <div class="carousel-item">
+        <img src="images/b5.jpg" alt="Banner 3">
+      </div>
+      <div class="carousel-item">
+        <img src="images/b6.jpg" alt="Banner 3">
+      </div>
+      <div class="carousel-item">
+        <img src="images/b7.jpg" alt="Banner 3">
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</section>
+
+<section class="about-light-section">
+  <div class="container">
+
+    <!-- TOP CONTENT -->
+    <div class="row mb-5 align-items-start">
+      <div class="col-lg-6">
+        <span class="section-tag"  data-aos="fade-right">About Us</span>
+       <h2 class="about-title"  data-aos="fade-right">
+  Delivering excellence in logistics<br>
+  since 1974
+</h2>
+
+      </div>
+
+      <div class="col-lg-6">
+        <p class="about-text" style="text-align: justify;"  data-aos="fade-left">
+          The company was established in the year 1974 originally in the name
+          <strong>S.M. Transports</strong> by industry veteran
+          <strong>Mr. N. Rajendran</strong>, having experience in the field since 1968.
+          The company was majorly focused on transportation of heavy consignments
+          across South India and pioneered movement of heavy equipment to
+          Neyveli Lignite Corporation, Bharat Heavy Electricals Limited and
+          Hindustan Aeronautics Limited. We also possess major experience in
+          transportation of Iron and Steel from SAIL / TATA yards to
+          Tube Products of India (Murugappa Group) and other clients across
+          Tamil Nadu.
+        </p>
+      </div>
+    </div>
+
+    <!-- CARDS -->
+    <div class="row g-4" style="margin-top: 80px;">
+
+      <!-- VISION -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up"
+     data-aos-duration="3000">
+        <div class="about-card" style="background-image:url('images/i1.jpg')">
+          <div class="about-card-overlay">
+            <span class="card-number">01</span>
+            <h4>Our Vision</h4>
+            <p>
+              We believe in customer satisfaction by executing efficient
+              logistical services and innovative solutions. We help customers
+              reduce operational expenses by delivering the right services at
+              the right time, at the right place.
+            </p>
+            <a href="about.html" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MISSION -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up"
+     data-aos-duration="3000">
+        <div class="about-card" style="background-image:url('images/i2.jpg')">
+          <div class="about-card-overlay">
+            <span class="card-number">02</span>
+            <h4>Our Mission</h4>
+            <p>
+              To be an extended arm of our customers’ business by exhibiting
+              our core competencies and values, thereby building strong
+              strategic partnerships for a mutually profitable future.
+            </p>
+            <a href="about.html" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- STORY -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up"
+     data-aos-duration="3000">
+        <div class="about-card" style="background-image:url('images/i3.jpg')">
+          <div class="about-card-overlay">
+            <span class="card-number">03</span>
+            <h4>Our Story</h4>
+            <p>
+              With decades of experience in handling heavy consignments and
+              bulk materials, Rajendran Logistics continues to deliver reliable,
+              safe and customer-focused transport solutions across South India.
+            </p>
+            <a href="about.html" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="who-we-are-alt bg-white">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-7">
+        <span class="section-tag"  data-aos="fade-right">Who We Are</span>
+
+        <h3 class="who-alt-title"  data-aos="fade-right">
+          Experts in Bulk Fly Ash & Cement<br>
+          Transportation
+        </h3>
+
+        <p class="who-alt-text" style="text-align: justify;"  data-aos="fade-right">
+          <strong>Rajendran Logistics</strong> is a leading Bulk Fly Ash and
+          Cement Transport Company headquartered in <strong>Bengaluru</strong>.
+          With a strong operational presence across
+          <strong>Tamil Nadu</strong> and <strong>Karnataka</strong>, we deliver
+          dependable and large-scale transportation solutions for industrial
+          clients.
+        </p>
+
+        <p class="who-alt-text"  data-aos="fade-right">
+          Backed by decades of industry expertise, our operations are driven by
+          safety, reliability, and efficiency—ensuring timely movement of bulk
+          materials across regions.
+        </p>
+      </div>
+
+      <!-- RIGHT HIGHLIGHT BOX -->
+      <div class="col-lg-5"  data-aos="fade-left">
+        <div class="fleet-card">
+
+          <h4 class="fleet-title">Fleet Capacity</h4>
+
+          <div class="fleet-item">
+            <div class="fleet-icon">🚛</div>
+            <div>
+              <span>Inbuilt Trucks</span>
+              <strong>20 – 30 Metric Tonnes</strong>
+            </div>
+          </div>
+
+          <div class="fleet-item">
+            <div class="fleet-icon">🚚</div>
+            <div>
+              <span>Trailer Trucks</span>
+              <strong>40 – 60 Metric Tonnes</strong>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="service-cards-section">
+
+  <!-- SECTION CONTENT -->
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <span class="section-tag"  data-aos="fade-right">Our Services</span>
+        <h2 class="services-title"  data-aos="fade-right">Industrial Transportation Solutions</h2>
+        <!-- <p class="services-text">
+          With strong experience in Iron & Steel logistics across Tamil Nadu,
+          we have expanded into Fly Ash and Cement transportation, serving
+          thermal power plants, cement factories, RMC units and related industries.
+        </p> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL WIDTH CARDS -->
+  <div class="container-fluid px-0 mb-5">
+    <div class="row g-0">
+
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-in">
+        <div class="service-card-ui">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqywXQluraQodj8PAvLwLV1l5Su3dMCvOaThOOWSarOfpkVf5Q" alt="Bulk Fly Ash Transport">
+          <div class="service-title-bar">Bulk Fly Ash Transport</div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-in">
+        <div class="service-card-ui">
+          <img src="images/s2.jpg" alt="Bulk Cement Transport">
+          <div class="service-title-bar">Bulk Cement Transport</div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-in">
+        <div class="service-card-ui">
+          <img src="images/i2.jpg" alt="Bottom Fly Ash Transport">
+          <div class="service-title-bar">Bottom Fly Ash Transport</div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-in">
+        <div class="service-card-ui">
+          <img src="https://images.91trucks.com/trucks/models/46/917/bharat-benz-1217c-898734103.jpg" alt="Rajendran Minerals" style="object-fit: cover; background: #d8d8d8;">
+          <div class="service-title-bar">Rajendran Minerals</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="clients-section">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="row mb-5">
+      <div class="col text-center">
+        <span class="section-tag" data-aos="zoom-in">Clients We Serve</span>
+        <h2 class="clients-title" data-aos="zoom-in">Trusted by Leading Brands</h2>
+      </div>
+    </div>
+
+    <!-- ROW 1 (Left ➜ Right) -->
+    <div class="row justify-content-center clients-row normal-row">
+      <div class="col-lg-2 col-md-3 col-6" data-aos="fade-up"
+     data-aos-duration="3000"><img src="images/c1.jpg" alt="Client 1"></div>
+      <div class="col-lg-2 col-md-3 col-6" data-aos="fade-up"
+     data-aos-duration="3000"><img src="images/c2.jpg" alt="Client 2"></div>
+      <div class="col-lg-2 col-md-3 col-6" data-aos="fade-up"
+     data-aos-duration="3000"><img src="images/c3.jpg" alt="Client 3"></div>
+      <div class="col-lg-2 col-md-3 col-6" data-aos="fade-up"
+     data-aos-duration="3000"><img src="images/c4.jpg" alt="Client 4"></div>
+      <div class="col-lg-2 col-md-3 col-6" data-aos="fade-up"
+     data-aos-duration="3000"><img src="images/c5.jpg" alt="Client 5"></div>
+    </div>
+
+    <!-- ROW 2 (Right ➜ Left) -->
+    <div class="row justify-content-center clients-row reverse-row">
+      <div class="col-lg-2 col-md-3 col-6" data-aos="fade-up"
+     data-aos-duration="3000"><img src="images/c6.jpg" alt="Client 6"></div>
+      <div class="col-lg-2 col-md-3 col-6" data-aos="fade-up"
+     data-aos-duration="3000"><img src="images/c7.jpg" alt="Client 7"></div>
+      <div class="col-lg-2 col-md-3 col-6" data-aos="fade-up"
+     data-aos-duration="3000"><img src="images/c8.jpg" alt="Client 8"></div>
+      <div class="col-lg-2 col-md-3 col-6" data-aos="fade-up"
+     data-aos-duration="3000"><img src="images/c9.jpg" alt="Client 9"></div>
+      <div class="col-lg-2 col-md-3 col-6" data-aos="fade-up"
+     data-aos-duration="3000"><img src="images/c10.jpg" alt="Client 10"></div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="testi-split-section mt-5">
+  <div class="container-fluid">
+    <div class="row g-0 align-items-stretch">
+
+      <!-- LEFT IMAGE -->
+      <div class="col-lg-6">
+        <div class="testi-image">
+          <div class="testi-overlay"></div>
+          <img src="images/i3.jpg" alt="Client Testimonials"  data-aos="fade-right">
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="col-lg-6">
+        <div class="testi-content"  data-aos="fade-left">
+
+          <span class="section-tag">Testimonials</span>
+          <h2 class="testi-title">
+            Heart From Our <span>Clients</span>
+          </h2>
+          <p class="testi-sub">
+            Trusted by leading industrial and infrastructure organizations
+          </p>
+
+          <!-- SLIDER -->
+          <div id="testimonialSlider" class="carousel slide"
+               data-bs-ride="carousel" data-bs-interval="5000">
+
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <div class="testi-card">
+                  <div class="quote-icon">“</div>
+                  <p>
+                    Day in and day out, you made our operations smooth by removing
+                    bottom fly ash, ensuring uninterrupted power generation.
+                    Thank you x10,000!
+                  </p>
+                  <h5>S. Sathiyanarayanan</h5>
+                  <span>CEO, NLC Tamil Nadu Power Ltd, Tuticorin</span>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="testi-card">
+                  <div class="quote-icon">“</div>
+                  <p>
+                    Rajendran Logistics is an amazing carrier with excellent work ethic.
+                    The staff are extremely friendly and a joy to work with.
+                  </p>
+                  <h5>J. Joseph</h5>
+                  <span>
+                    Managing Director, Thirupathi Cement Carriers<br>
+                    Authorized Transporter for UltraTech Cements Ltd
+                  </span>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="testi-card">
+                  <div class="quote-icon">“</div>
+                  <p>
+                    Good buildings come from good people, and all problems are solved
+                    by supplying fly ash on time.
+                  </p>
+                  <h5>M. Venkatesan</h5>
+                  <span>
+                    Fly Ash Supplier – Leading RMC Plants<br>
+                    Authorized Transporter for Dalmia Cements Ltd
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- DOTS -->
+            <div class="carousel-indicators testimonial-dots">
+              <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="2"></button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="cta-section mt-5">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+
+      <div class="col-lg-8">
+        <h2 class="cta-title" data-aos="zoom-in">Rajendran Logistics</h2>
+        <p class="cta-text" data-aos="zoom-in">
+          Contact us now to get a quotation for transportation of
+          <strong>Bulk Cement</strong> and <strong>Bulk Dry Fly Ash</strong>.
+        </p>
+
+        <a href="contact.html" data-aos="zoom-in" class="cta-btn mt-4">Contact Us</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer mt-5">
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <!-- COMPANY INFO -->
+      <div class="col-lg-4 col-md-6">
+        <h4 class="footer-title" data-aos="fade-right" >Rajendran Logistics</h4>
+        <p class="footer-text"  data-aos="fade-right">
+          Transporters of Bulk Fly Ash and Cement, delivering reliable
+          and efficient logistics solutions across South India.
+        </p>
+
+        <div class="footer-social">
+    <a href="#" aria-label="Facebook" data-aos="fade-up"
+     data-aos-duration="3000"><i class="bi bi-facebook"></i></a>
+    <a href="#" aria-label="Instagram" data-aos="fade-up"
+     data-aos-duration="3000"><i class="bi bi-instagram"></i></a>
+    <a href="#" aria-label="LinkedIn" data-aos="fade-up"
+     data-aos-duration="3000"><i class="bi bi-linkedin"></i></a>
+    <a href="https://wa.me/916364367706" aria-label="WhatsApp" data-aos="fade-up"
+     data-aos-duration="3000">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="col-lg-2 col-md-6">
+        <h5 class="footer-heading" data-aos="zoom-in">Quick Links</h5>
+        <ul class="footer-links">
+          <li data-aos="zoom-in"><a href="index.html">Home</a></li>
+          <li data-aos="zoom-in"><a href="about.html">About Us</a></li>
+          <li data-aos="zoom-in"><a href="bulk-fly-ash.html">Services</a></li>
+          <li data-aos="zoom-in"><a href="rajendran-minerals.html">Rajendran Minerals</a></li>
+          <li data-aos="zoom-in"><a href="gallery.html">Gallery</a></li>
+          <li data-aos="zoom-in"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-heading" data-aos="zoom-in">Our Services</h5>
+        <ul class="footer-links">
+          <li data-aos="zoom-in"><a href="bulk-fly-ash.html">Bulk Fly Ash Transport</a></li>
+          <li data-aos="zoom-in"><a href="bulk-cement.html">Bulk Cement Transport</a></li>
+          <li data-aos="zoom-in"><a href="bottom-fly-ash.html">Bottom Fly Ash Transport</a></li>
+          <li data-aos="zoom-in"><a href="rajendran-minerals.html">Rajendran Minerals</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT + SOCIAL -->
+  <div class="col-lg-3 col-md-6">
+  <h5 class="footer-heading" data-aos="zoom-in">Contact Info</h5>
+
+  <!-- ADDRESS -->
+  <p class="footer-address" data-aos="zoom-in">
+    <i class="bi bi-geo-alt-fill"></i>
+    K.R Puram – Marathalli Ring Road,<br>
+    Mahadevapura Extension,<br>
+    Bangalore – 560048
+  </p>
+
+  <!-- PHONE -->
+  <p class="footer-contact-item" data-aos="zoom-in">
+    <i class="bi bi-telephone-fill"></i>
+    <a href="tel:+916364367706">+91-6364367706</a><br>
+    <i class="bi bi-telephone-fill"></i>
+    <a href="tel:+918123579757">+91-8123579757</a>
+  </p>
+
+  <!-- EMAIL -->
+  <p class="footer-contact-item" data-aos="zoom-in">
+    <i class="bi bi-envelope-fill"></i>
+    <a href="mailto:rajenlogistics@yahoo.com">
+      rajenlogistics@yahoo.com
+    </a>
+  </p>
+
+  <!-- SOCIAL ICONS -->
+ 
+</div>
+
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+      <p>
+        © 2025 <strong>Rajendran Logistics</strong>. All rights reserved.
+      </p>
+      <p>
+        Created by <a href="#" class="creator">Optimista</a>
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

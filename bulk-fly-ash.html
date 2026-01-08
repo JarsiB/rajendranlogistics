@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rajendran Logistics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    /* ================= TOP BAR ================= */
+    .top-bar {
+      background-color: #0b1d33;
+      color: #ffffff;
+      font-size: 14px;
+      padding: 8px 0;
+      padding-bottom: 10px;
+      padding-right: 10px;
+    }
+
+    .top-bar i {
+      color:  rgb(247, 226, 89);
+      margin-right: 6px;
+    }
+
+    .top-bar a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* ================= NAVBAR ================= */
+    .navbar {
+      background-color: #ffffff;
+      padding: 15px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+   /* LOGO SIZE CONTROL */
+.navbar-brand img {
+  height: 55px;        /* Desktop */
+  max-height: 70px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .navbar-brand img {
+    height: 55px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 45px;
+  }
+}
+
+
+    .navbar-nav .nav-link {
+      color: #0b1d33 !important;
+      font-weight: 500;
+      margin-left: 18px;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color:  rgb(247, 226, 89) !important;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+.dropdown-menu {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.dropdown-item {
+  padding: 10px 18px;
+  font-weight: 500;
+  color: #0b1d33;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f5ff;
+  color:  rgb(247, 226, 89);
+}
+
+    /* ================= HERO CAROUSEL ================= */
+    .hero-carousel {
+      background: linear-gradient(180deg, #0b1d33, #0e243f);
+    }
+
+    .hero-carousel img {
+      width: 100%;
+      object-fit: contain;
+      background-color: transparent;
+    }
+
+    @media (max-width: 576px) {
+      .navbar-brand img {
+        height: 38px;
+      }
+      .top-bar {
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+    /* ================= INNER HERO (2 BG IMAGES) ================= */
+.inner-hero {
+  position: relative;
+  height: 320px;
+  margin-top: 100px;
+
+  /* TWO BACKGROUND IMAGES */
+  background-image:
+    url("images/i2.jpg"),   /* LEFT image */
+    url("images/i1.jpg");   /* RIGHT image */
+
+  background-repeat: no-repeat, no-repeat;
+  background-position: left center, right center;
+  background-size: 50% 100%, 50% 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+/* Overlay */
+.inner-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(11, 29, 51, 0.85),
+    rgba(11, 29, 51, 0.65)
+  );
+}
+
+/* Content */
+.inner-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+}
+
+.inner-hero-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Breadcrumb */
+.breadcrumb-wrap {
+  font-size: 15px;
+}
+
+.breadcrumb-wrap a {
+  color: rgb(247, 226, 89);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb-wrap span {
+  margin: 0 6px;
+  color: rgba(255,255,255,0.8);
+}
+
+.breadcrumb-wrap .active {
+  color: #ffffff;
+}
+
+/* Responsive – Mobile single image */
+@media (max-width: 768px) {
+  .inner-hero {
+    height: 220px;
+    background-image: url("images/i2.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .inner-hero-content h1 {
+    font-size: 28px;
+  }
+}
+/* ================= FLY ASH CONTENT SECTION ================= */
+.flyash-content-section {
+  padding: 90px 0;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Image */
+.flyash-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+
+/* Content */
+.content-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0b1d33;
+  margin-bottom: 20px;
+}
+
+.content-text {
+  font-size: 15.8px;
+  color: #444;
+  line-height: 1.75;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-title {
+    font-size: 24px;
+  }
+
+  .flyash-content-section {
+    padding: 60px 0;
+  }
+}
+/* ================= USER TYPE SECTION ================= */
+.flyash-user-types {
+  padding: 100px 0;
+  background: #f9fafc;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0b1d33;
+}
+
+.section-tag {
+  color: #f7e259;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+/* User Cards */
+.user-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.user-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #0b1d33;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.user-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0b1d33;
+  margin-bottom: 12px;
+}
+
+.user-card p {
+  font-size: 15.5px;
+  color: #444;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.user-card ul {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.user-card ul li {
+  font-size: 15.5px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 26px;
+  }
+
+  .user-card {
+    padding: 24px;
+  }
+}
+/* ================= AUTHORIZED TRANSPORT SECTION ================= */
+.authorized-transport-section {
+  padding: 100px 0;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Image */
+.authorized-image img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* Section heading */
+.section-tag {
+  display: inline-block;
+  color: #f7e259;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b1d33;
+  margin-bottom: 20px;
+}
+
+/* Content */
+.content-text {
+  font-size: 15.8px;
+  color: #444;
+  line-height: 1.75;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.transport-list {
+  padding-left: 18px;
+  margin-bottom: 25px;
+}
+
+.transport-list li {
+  font-size: 15.5px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* Fleet box */
+.fleet-box {
+  background: #f9fafc;
+  padding: 25px;
+  border-radius: 14px;
+  /* border-left: 4px solid #0b1d33; */
+}
+
+.fleet-box h4 {
+  font-size: 20px;
+  color: #0b1d33;
+  margin-bottom: 12px;
+}
+
+.fleet-box p {
+  font-size: 15.5px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 26px;
+  }
+
+  .authorized-transport-section {
+    padding: 70px 0;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 900,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+
+<!-- ================= TOP BAR ================= -->
+<div class="top-bar fixed-top">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-lg-6 col-md-12 mb-2 mb-lg-0" data-aos="zoom-in">
+        <i class="bi bi-telephone-fill"></i>
+        Call Us Now:
+        <a href="tel:+916364367706">+91-6364367706</a> /
+        <a href="tel:+918123579757">+91-8123579757</a>
+      </div>
+
+      <div class="col-lg-6 col-md-12 text-lg-end" data-aos="zoom-in">
+      
+        <i class="bi bi-envelope-fill"></i>
+        <a href="mailto:rajenlogistics@yahoo.com">rajenlogistics@yahoo.com</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top" style="top:40px;">
+  <div class="container">
+
+    <!-- LOGO -->
+    <a class="navbar-brand" href="index.html">
+      <img src="images/newlogo.png" alt="Rajendran Logistics" data-aos="zoom-in">
+    </a>
+
+    <!-- TOGGLER -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NAV LINKS -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link " href="index.html">Home</a></li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="about.html">About Us</a></li>
+<li class="nav-item dropdown" data-aos="zoom-in">
+  <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown"
+     role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Services
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="bulk-fly-ash.html">Bulk Fly Ash Transport</a></li>
+    <li><a class="dropdown-item" href="bulk-cement.html">Bulk Cement Transport</a></li>
+    <li><a class="dropdown-item" href="bottom-fly-ash.html">Bottom Fly Ash Transport</a></li>
+  </ul>
+</li>
+<li class="nav-item dropdown" data-aos="zoom-in">
+  <a class="nav-link dropdown-toggle" href="#" id="mineralsDropdown"
+     role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Rajendran Minerals
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="rajendran-minerals.html">Rajendran Minerals</a></li>
+    <li><a class="dropdown-item" href="about-fly-ash.html">About Fly Ash</a></li>
+  </ul>
+</li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="clients.html">Clients</a></li>
+        <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<section class="inner-hero">
+  <div class="inner-hero-overlay"></div>
+
+  <div class="container">
+    <div class="inner-hero-content">
+      <h1 data-aos="zoom-in">Bulk Fly Ash</h1>
+
+      <nav class="breadcrumb-wrap"data-aos="zoom-in">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="active">Bulk Fly Ash</span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+
+<section class="flyash-content-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT IMAGE -->
+      <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+        <div class="flyash-image">
+          <img src="images/s1.png" alt="Bulk Fly Ash Transportation">
+        </div>
+      
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="col-lg-7" data-aos="fade-left">
+        <h2 class="content-title">
+          Transport of Bulk Fly Ash from Thermal Power Plants to Cement Factories
+        </h2>
+
+        <p class="content-text">
+          As cement plants require dry fly ash, earlier some thermal power plants
+          arranged loading of fly ash directly from ESP hoppers into trucks.
+          This practice resulted in severe air pollution due to fugitive dust
+          emissions. Following the recommendations of the Central Pollution Control
+          Board (CPCB) under Corporate Responsibility for Environmental Protection
+          (CREP), thermal power plants initiated the construction of silos for
+          intermediate storage of dry fly ash and implemented proper loading
+          mechanisms.
+        </p>
+
+        <p class="content-text">
+          Fly ash loaded from these silos is transported to cement plants using
+          specially designed bulkers. However, fly ash transportation involves
+          several challenges such as transportation distance, form of ash (dry or wet),
+          user requirements, economic feasibility, surrounding environmental
+          conditions and other site-specific factors.
+        </p>
+
+        <p class="content-text">
+          Controlling dust emission during transportation is the primary concern,
+          especially since fly ash movement covers larger areas and passes through
+          multiple sensitive receptors. Fly ash is utilized in various applications
+          including cement manufacturing, brick production, mine backfilling, road
+          construction and filling of low-lying areas. Therefore, handling and
+          transportation methods must be carefully selected based on end use.
+        </p>
+
+        <p class="content-text">
+          To minimize fugitive dust emissions, appropriate transportation modes
+          and precautionary measures are essential for different end users of
+          fly ash or bottom ash.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="flyash-user-types">
+  <div class="container">
+
+    <!-- Section Title -->
+    <div class="row mb-5">
+      <div class="col-lg-12 text-center">
+        <span class="section-tag" data-aos="fade-up">Transportation Guidelines</span>
+        <h2 class="section-title" data-aos="fade-up">
+          User Type-wise Fly Ash Transportation
+        </h2>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- USER TYPE 1 -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="user-card">
+          <span class="user-tag">User Type 1</span>
+          <h4>Cement / Asbestos Manufacturing</h4>
+          <p>
+            Specially designed road bulkers or mechanically designed covered trucks
+            equipped with automatic loading and unloading systems using compressors
+            or vacuum pumps mounted on tankers must be used.
+          </p>
+        </div>
+      </div>
+
+      <!-- USER TYPE 2 -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="user-card">
+          <span class="user-tag">User Type 2</span>
+          <h4>Fly Ash Based Brick, Tiles & Blocks Manufacturing</h4>
+          <ul>
+            <li>
+              Tankers / bulkers or mechanically designed covered trucks must be used.
+            </li>
+            <li>
+              Tractor trolleys with box-type top cover and hydraulic unloading systems
+              shall be deployed for transportation of dry or wet fly ash while passing
+              through inhabited areas.
+            </li>
+            <li>
+              For short distances, tractor trolleys covered with good quality HDPE
+              tarpaulin may be permitted.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- USER TYPE 3 -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="user-card">
+          <span class="user-tag">User Type 3</span>
+          <h4>Road Construction & Filling of Low-Lying Areas</h4>
+          <p>
+            Tankers, bulkers or mechanically designed covered trucks must be used
+            shown to prevent fugitive dust emissions during transportation.
+          </p>
+        </div>
+      </div>
+
+      <!-- USER TYPE 4 -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="user-card">
+          <span class="user-tag">User Type 4</span>
+          <h4>Other Miscellaneous Purposes</h4>
+          <p>
+            Only tankers, bulkers or mechanically designed covered trucks are permitted
+            for transportation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="authorized-transport-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT IMAGE -->
+      <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+        <div class="authorized-image">
+          <img src="images/i1.jpg" alt="Rajendran Logistics Bulker Fleet">
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="col-lg-7" data-aos="fade-left">
+        <span class="section-tag">Authorized Transporter</span>
+        <h2 class="section-title">
+          Bulk Fly Ash & Cement Transportation
+        </h2>
+
+        <p class="content-text">
+          We are authorized transporters for <strong>The Ramco Cements Ltd</strong>,
+          undertaking bulk fly ash and cement transportation with strict adherence
+          to safety and environmental standards.
+        </p>
+
+        <ul class="transport-list">
+          <li>
+            Transporting Dry Fly Ash from <strong>NLC Tamil Nadu Power Limited,
+            Tuticorin</strong> to <strong>Ramco Cements, Ramaswamy Raja Nagar,
+            Virudhunagar District, Tamil Nadu</strong>.
+          </li>
+          <li>
+            Transporting Dry Fly Ash from <strong>NLC Tamil Nadu Power Limited,
+            Tuticorin</strong> to <strong>Ramco Cements, Govindapuram,
+            Ariyalur District, Tamil Nadu</strong>.
+          </li>
+          <li>
+            Transporting Dry Fly Ash from <strong>NLC Tamil Nadu Power Limited,
+            Tuticorin</strong> to <strong>Ramco Cements, Singhipuram,
+            Salem District, Tamil Nadu</strong>.
+          </li>
+          <li>
+            Transporting Cement from <strong>Ramco Cements, Alathiyur Plant</strong>
+            to <strong>Ramco Cements, Singhipuram Plant</strong>.
+          </li>
+        </ul>
+
+        <div class="fleet-box">
+          <h4>Our Fleet Strength</h4>
+          <p>
+            Rajendran Logistics maintains a fleet of
+            <strong>20 Inbuilt Bulker Tanker Trucks</strong> and
+            <strong>10 Bulker Trailer Tractor Trucks</strong> to efficiently
+            cater to varying transportation requirements across regions.
+          </p>
+
+          <p>
+            <strong>Inbuilt Bulker Tanker Trucks (25 – 30 MT):</strong>
+            Manufactured by SAATRAC® Engineering, these tankers are designed
+            for capacities ranging from 25 to 35 metric tonnes and ensure
+            complete and efficient unloading of material.
+          </p>
+
+          <p>
+            <strong>Bulker Trailer Trucks (40 – 60 MT):</strong>
+            These high-capacity trucks handle loads between 40 to 50 metric
+            tonnes and are deployed during higher volume transportation needs.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-section mt-5">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+
+      <div class="col-lg-8">
+        <h2 class="cta-title" data-aos="zoom-in">Rajendran Logistics</h2>
+        <p class="cta-text" data-aos="zoom-in">
+          Contact us now to get a quotation for transportation of
+          <strong>Bulk Cement</strong> and <strong>Bulk Dry Fly Ash</strong>.
+        </p>
+
+        <a href="contact.html" data-aos="zoom-in" class="cta-btn mt-4">Contact Us</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer mt-5">
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <!-- COMPANY INFO -->
+      <div class="col-lg-4 col-md-6">
+        <h4 class="footer-title" data-aos="fade-right" >Rajendran Logistics</h4>
+        <p class="footer-text"  data-aos="fade-right">
+          Transporters of Bulk Fly Ash and Cement, delivering reliable
+          and efficient logistics solutions across South India.
+        </p>
+
+        <div class="footer-social">
+    <a href="#" aria-label="Facebook" data-aos="fade-up"
+     data-aos-duration="3000"><i class="bi bi-facebook"></i></a>
+    <a href="#" aria-label="Instagram" data-aos="fade-up"
+     data-aos-duration="3000"><i class="bi bi-instagram"></i></a>
+    <a href="#" aria-label="LinkedIn" data-aos="fade-up"
+     data-aos-duration="3000"><i class="bi bi-linkedin"></i></a>
+    <a href="https://wa.me/916364367706" aria-label="WhatsApp" data-aos="fade-up"
+     data-aos-duration="3000">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="col-lg-2 col-md-6">
+        <h5 class="footer-heading" data-aos="zoom-in">Quick Links</h5>
+        <ul class="footer-links">
+          <li data-aos="zoom-in"><a href="index.html">Home</a></li>
+          <li data-aos="zoom-in"><a href="about.html">About Us</a></li>
+          <li data-aos="zoom-in"><a href="bulk-fly-ash.html">Services</a></li>
+          <li data-aos="zoom-in"><a href="rajendran-minerals.html">Rajendran Minerals</a></li>
+          <li data-aos="zoom-in"><a href="gallery.html">Gallery</a></li>
+          <li data-aos="zoom-in"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-heading" data-aos="zoom-in">Our Services</h5>
+        <ul class="footer-links">
+          <li data-aos="zoom-in"><a href="bulk-fly-ash.html">Bulk Fly Ash Transport</a></li>
+          <li data-aos="zoom-in"><a href="bulk-cement.html">Bulk Cement Transport</a></li>
+          <li data-aos="zoom-in"><a href="bottom-fly-ash.html">Bottom Fly Ash Transport</a></li>
+          <li data-aos="zoom-in"><a href="rajendran-minerals.html">Rajendran Minerals</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT + SOCIAL -->
+  <div class="col-lg-3 col-md-6">
+  <h5 class="footer-heading" data-aos="zoom-in">Contact Info</h5>
+
+  <!-- ADDRESS -->
+  <p class="footer-address" data-aos="zoom-in">
+    <i class="bi bi-geo-alt-fill"></i>
+    K.R Puram – Marathalli Ring Road,<br>
+    Mahadevapura Extension,<br>
+    Bangalore – 560048
+  </p>
+
+  <!-- PHONE -->
+  <p class="footer-contact-item" data-aos="zoom-in">
+    <i class="bi bi-telephone-fill"></i>
+    <a href="tel:+916364367706">+91-6364367706</a><br>
+    <i class="bi bi-telephone-fill"></i>
+    <a href="tel:+918123579757">+91-8123579757</a>
+  </p>
+
+  <!-- EMAIL -->
+  <p class="footer-contact-item" data-aos="zoom-in">
+    <i class="bi bi-envelope-fill"></i>
+    <a href="mailto:rajenlogistics@yahoo.com">
+      rajenlogistics@yahoo.com
+    </a>
+  </p>
+
+  <!-- SOCIAL ICONS -->
+ 
+</div>
+
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+      <p>
+        © 2025 <strong>Rajendran Logistics</strong>. All rights reserved.
+      </p>
+      <p>
+        Created by <a href="#" class="creator">Optimista</a>
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
