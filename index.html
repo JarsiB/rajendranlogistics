@@ -163,7 +163,7 @@
 }
 
     /* ================= HERO CAROUSEL ================= */
-    .hero-carousel {
+    /* .hero-carousel {
       background: linear-gradient(180deg, #0b1d33, #0e243f);
     }
 
@@ -171,12 +171,12 @@
       width: 100%;
       object-fit: contain;
       background-color: transparent;
-    }
+    } */
 
     @media (max-width: 576px) {
-      .navbar-brand img {
+      /* .navbar-brand img {
         height: 38px;
-      }
+      } */
       .top-bar {
         font-size: 13px;
         text-align: center;
@@ -189,6 +189,110 @@
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   z-index: 1090;
 }
+
+/* ================= HERO CAROUSEL ================= */
+.hero-carousel {
+  position: relative;
+}
+
+/* Slide Wrapper */
+.hero-slide {
+  position: relative;
+  height: 70vh; /* Fixed as requested */
+  min-height: 300px;
+}
+
+/* Image */
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(11, 29, 51, 0.85),
+    rgba(11, 29, 51, 0.55)
+  );
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-sub {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(247, 226, 89);
+  margin-bottom: 12px;
+}
+
+.hero-tagline {
+  font-size: 16px;
+  max-width: 800px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-sub {
+    font-size: 18px;
+  }
+
+  .hero-tagline {
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .hero-slide {
+    height: 45vh;
+   
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+    margin-top: 40px;
+      
+  }
+ 
+
+  .hero-sub {
+    font-size: 15px;
+  }
+
+  .hero-tagline {
+    font-size: 13px;
+  }
+}
+
 
   </style>
 </head>
@@ -277,7 +381,7 @@
 </nav>
 
 <!-- ================= HERO SECTION ================= -->
-<section class="hero-carousel pt-5 " style="margin-top: 80px;">
+<!-- <section class="hero-carousel pt-5 " style="margin-top: 80px;">
   <div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
 
     <div class="carousel-inner">
@@ -317,7 +421,126 @@
     </button>
 
   </div>
+</section> -->
+<section class="hero-carousel">
+  <div id="heroSlider"
+       class="carousel slide carousel-fade"
+       data-bs-ride="carousel"
+       data-bs-interval="4500">
+
+    <div class="carousel-inner mt-2">
+
+      <!-- SLIDE 1 -->
+      <div class="carousel-item active mt-5">
+        <div class="hero-slide">
+          <img src="https://rajendranlogistics.com/images/fleet-gallery-1/2.jpg" alt="Rajendran Logistics">
+
+          <div class="hero-overlay"></div>
+
+          <div class="hero-content container">
+            <h1>Welcome to Rajendran Logistics</h1>
+            <p class="hero-sub">Transporters of <strong>Bulk Fly Ash</strong> & <strong>Cement</strong></p>
+            <p class="hero-tagline">
+              Delivering reliable, safe and efficient bulk transportation
+              solutions across South India.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="carousel-item mt-5">
+        <div class="hero-slide">
+          <img src="https://conmatindia.com/html/wp-content/uploads/2018/02/Concrete-Batching-Plant-RMC-Series-1.jpg" alt="Bulk Cement Transport">
+
+          <div class="hero-overlay"></div>
+
+          <div class="hero-content container">
+            <h1>Reliable Bulk Transportation</h1>
+            <p class="hero-sub">Fly Ash & Cement Logistics Specialists</p>
+            <p class="hero-tagline">
+              We ensure seamless movement of bulk materials from
+              thermal power plants and cement factories to customers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    
+
+      <!-- SLIDE 4 -->
+      <div class="carousel-item mt-5">
+        <div class="hero-slide">
+          <img src="images/sm1.jpg" alt="Bulk Carrier Fleet">
+
+          <div class="hero-overlay"></div>
+
+          <div class="hero-content container">
+            <h1>Modern Bulk Carrier Fleet</h1>
+            <p class="hero-sub">Inbuilt Bulkers & Trailer Tankers</p>
+            <p class="hero-tagline">
+              Our specialized fleet is designed for dust-free transport,
+              efficient loading and complete material discharge.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 5 -->
+      <div class="carousel-item mt-5">
+        <div class="hero-slide">
+          <img src="images/b5.jpg" alt="Safe Transport">
+
+          <div class="hero-overlay"></div>
+
+          <div class="hero-content container">
+            <h1>Safety & Quality First</h1>
+            <p class="hero-sub">Customer-Centric Transport Solutions</p>
+            <p class="hero-tagline">
+              We follow strict safety standards and ethical practices to
+              ensure material integrity and customer satisfaction.
+            </p>
+          </div>
+        </div>
+      </div>
+
+ 
+
+      <!-- SLIDE 7 -->
+      <div class="carousel-item mt-5">
+        <div class="hero-slide">
+          <img src="images/b7.jpg" alt="Logistics Partner">
+
+          <div class="hero-overlay"></div>
+
+          <div class="hero-content container">
+            <h1>Your Logistics Partner</h1>
+            <p class="hero-sub">Connecting Power Plants & Cement Industries</p>
+            <p class="hero-tagline">
+              Rajendran Logistics acts as a vital link between producers
+              and users of fly ash and cement for smooth operations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CONTROLS -->
+    <button class="carousel-control-prev" type="button"
+            data-bs-target="#heroSlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button"
+            data-bs-target="#heroSlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
 </section>
+
+
 
 <section class="about-light-section">
   <div class="container">
