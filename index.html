@@ -92,39 +92,43 @@
   height: 55px;        /* Desktop */
   /* max-height: 70px; */
 }
-/* Mobile */
-@media (max-width: 576px) {
-  .navbar {
-    padding: 6px 0;
-    margin-top: 10px;
-  }
-
-  .navbar-brand img {
-    height: 40px;
-  }
-
-  .navbar-toggler {
-    padding: 4px 8px;
-  }
+.navbar-brand img {
+  height: 55px;   /* Desktop */
 }
+
 /* Tablet */
 @media (max-width: 992px) {
-  
-.navbar {
-    padding: 6px 0;
-    margin-top: 10px;
-  }
   .navbar-brand img {
-    height: 55px;
+    height: 48px;
   }
 }
 
 /* Mobile */
 @media (max-width: 576px) {
   .navbar-brand img {
-    height: 45px;
+    height: 38px;   /* Smaller for phone */
   }
 }
+/* FORCE LOGO + TOGGLE IN ONE ROW */
+.navbar > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Prevent logo from shrinking or wrapping */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Keep toggle always on right */
+.navbar-toggler {
+  margin-left: auto;
+  padding: 4px 8px;
+}
+
 
 
     .navbar-nav .nav-link {
@@ -293,7 +297,10 @@
   }
 }
 
-
+html, body {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+}
   </style>
 </head>
 
@@ -489,7 +496,7 @@
       <!-- SLIDE 5 -->
       <div class="carousel-item mt-5">
         <div class="hero-slide">
-          <img src="images/b5.jpg" alt="Safe Transport">
+          <img src="images/b3.jpg" alt="Safe Transport">
 
           <div class="hero-overlay"></div>
 
